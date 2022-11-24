@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#quotes-container{
+    padding: 8rem;
+    width: 45rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    margin-top: 2rem;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+}
