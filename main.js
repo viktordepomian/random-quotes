@@ -4,21 +4,12 @@
 const QUOTEOUTPUT = document.querySelector('.quote-output');
 const GENERATEBTN = document.querySelector('.generate-quote');
 
-function generateQuote(){
-    //fetch etc....
+GENERATEBTN.addEventListener('click', function(){
+    apiRequest();
+});
 
-    GENERATEBTN.addEventListener('click', function(){
-
-        
-        //QUOTEOUTPUT.textContent = 'teadakdwapdpwaad';
-    });
+async function apiRequest(){
+    const response = await fetch('https://api.quotable.io/random');
+    const data = await response.json();
+    QUOTEOUTPUT.textContent = `${data.content} - ${data.author}`;
 }
-
-generateQuote();
-
-
-fetch('https://api.github.com/users/manishmshiva')
-    // Handle success
-    .then(response => response.json())  // convert to json
-    .then(json => console.log(json))    //print data to console
-    .catch(err => console.log('Request Failed', err)); // Catch errors
